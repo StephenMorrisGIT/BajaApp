@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "435267412694",
+    "firebase_url": "https://gw-baja-app.firebaseio.com",
+    "project_id": "gw-baja-app",
+    "storage_bucket": "gw-baja-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435267412694:android:1931cd0ba1bd03b12d1f77",
+        "android_client_info": {
+          "package_name": "com.example.project2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435267412694-djieje00toioetu3c4t0b4mr4meak3ti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJbXZoa533rRaNqzAYyeyNYWaeLyeKMlk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435267412694-djieje00toioetu3c4t0b4mr4meak3ti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
