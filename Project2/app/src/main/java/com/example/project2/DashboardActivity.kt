@@ -112,9 +112,9 @@ class DashboardActivity : AppCompatActivity() {
                     if (metric != null) {
                         // metrics.add(metric)
                         rpmDisplay.setText(metric.RPM.toString())
-                        fuelDisplay.setText(metric.RemainingFuel.toString())
-                        ambientDisplay.setText(metric.ambient.toString())
-                        objectDisplay.setText(metric.Object.toString())
+                        fuelDisplay.setText(metric.RemainingFuel.toString() + "%")
+                        ambientDisplay.setText(metric.ambient.toString() + "F")
+                        objectDisplay.setText(metric.Object.toString() + "F")
                         // val coord: LatLng = LatLng(metric.latitude, metric.longitude)
                         // coords.add(coord)
                         Log.d("Pull data", "Data pulled successfully")
