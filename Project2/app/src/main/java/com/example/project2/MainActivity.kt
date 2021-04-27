@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var password: EditText
     private lateinit var login: Button
     private lateinit var signUp: Button
+    private lateinit var login2: Button
     private lateinit var switch: Switch
     private lateinit var language: CheckBox
     private lateinit var progressBar: ProgressBar
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         email = findViewById(R.id.signInEmail)
         password = findViewById(R.id.signInPassword)
         login = findViewById(R.id.logInButton)
+        login2 = findViewById(R.id.logInButton2)
         signUp = findViewById(R.id.signUp)
         progressBar = findViewById(R.id.loginProgressBar)
         switch = findViewById(R.id.rememberSwitch)
@@ -44,6 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         login.isEnabled = false
         switch.isEnabled = false
+        login2.isEnabled = true
 
         language.setOnCheckedChangeListener { CheckBox, isChecked ->
             languageCheck = true
@@ -119,6 +122,12 @@ class MainActivity : AppCompatActivity() {
             sharedPrefs.edit().putBoolean("SAVED_PREFERENCE", isChecked).apply()
             sharedPrefs.edit().putString("SAVED_EMAIL", email.text.toString()).apply()
             sharedPrefs.edit().putString("SAVED_PASSWORD", password.text.toString()).apply()
+        }
+
+        login2.setOnClickListener {
+            val intent = Intent(this, DashboardActivity::class.java)
+            intent.putExtra("language", languageCheck)
+            startActivity(intent)
         }
     }
 }

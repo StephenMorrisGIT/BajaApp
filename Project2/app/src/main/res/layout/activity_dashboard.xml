@@ -7,13 +7,50 @@
     tools:context=".DashboardActivity">
 
     <TextView
-        android:id="@+id/speedTextView"
+        android:id="@+id/objectDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="00"
+        android:textColor="#4CAF50"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/objectTextView"
+        app:layout_constraintTop_toBottomOf="@+id/ambientDisplay" />
+
+    <TextView
+        android:id="@+id/ambientTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Ambient"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fuelTextView" />
+
+    <TextView
+        android:id="@+id/objectTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Object"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ambientTextView" />
+
+    <TextView
+        android:id="@+id/RPMTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:lineSpacingExtra="14sp"
-        android:text="Current Speed"
+        android:text="RPM"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,16 +70,16 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/altitudeTextView"
+        android:id="@+id/fuelTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Current Altitude"
+        android:text="Remaining Fuel"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/speedTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/RPMTextView" />
 
     <Button
         android:id="@+id/mapsButton"
@@ -69,7 +106,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/speedDisplay"
+        android:id="@+id/rpmDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -78,11 +115,11 @@
         android:textColor="#4CAF50"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/speedTextView"
+        app:layout_constraintStart_toEndOf="@+id/RPMTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/altitudeDisplay"
+        android:id="@+id/fuelDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -91,6 +128,20 @@
         android:textColor="#4CAF50"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/altitudeTextView"
-        app:layout_constraintTop_toBottomOf="@+id/speedDisplay" />
+        app:layout_constraintStart_toEndOf="@+id/fuelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/rpmDisplay" />
+
+    <TextView
+        android:id="@+id/ambientDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="00"
+        android:textColor="#4CAF50"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ambientTextView"
+        app:layout_constraintTop_toBottomOf="@+id/fuelDisplay" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
